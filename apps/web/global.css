@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swiper Pagination 커스터마이즈 */
+.custom-swiper .swiper-pagination {
+  top: 10px; /* 상단 위치 */
+  bottom: auto; /* 기본 하단 제거 */
+  left: 0;
+  right: 0;
+  text-align: center; /* 가운데 정렬 */
+}

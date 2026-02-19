@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  app:
+    platform: linux/amd64
+    image: yuu-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    restart: always
+    ports:
+      - "127.0.0.1:4000:3000"
+  admin:
+    platform: linux/amd64
+    image: yuu-admin:latest
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+    env_file: .env
+    restart: always
+    ports:
+      - "127.0.0.1:4001:3000"
+    environment:
+      - PORT=3000
+      - HOSTNAME=0.0.0.0

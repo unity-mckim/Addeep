@@ -1,0 +1,12 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+        "build",
+        "-f",
+        "dockerfile", # 소문자 dockerfile 명시
+        "-t",
+        "asia-northeast3-docker.pkg.dev/hybrid-subject-469800-r7/web-app/yuu-app:latest",
+        ".",
+      ]
+images:
+  - "asia-northeast3-docker.pkg.dev/hybrid-subject-469800-r7/web-app/yuu-app:latest"
