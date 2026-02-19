@@ -237,7 +237,7 @@ function EventContent() {
       const { data, count, error } = await supabase
         .from("events")
         .select("*", { count: "exact" })
-        .order("id")
+        .order("event_date")
         .range(
           pagination.pageIndex * 10,
           pagination.pageIndex * 10 + (pagination.pageSize - 1)

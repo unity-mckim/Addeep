@@ -76,7 +76,7 @@ const siteName = "Addeep";
 const siteDescription = "Addeep official site and platform to earn.";
 const canonicalBase = NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
 const alternateBase = "https://addeep.co.kr";
-const ogImage = "/images/addeep-is-image.png";
+const ogImage = "/images/og_image.png";
 
 export function generateMetadata(): Metadata {
   const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
